@@ -6,4 +6,4 @@ for i,num in enumerate(nums):
     if n not in d:
         d[num]=i 
     else:
-        print(d[n],i)
+        print(n,num)
