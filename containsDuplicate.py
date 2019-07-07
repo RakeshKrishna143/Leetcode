@@ -1,4 +1,14 @@
 
+class Solution:
+    def containsDuplicate(self, a: List[int]) -> bool:
+        if len(a)!=len(set(a)):
+            return True
+        return False
+        
+        
+
+
+
 def containsDuplicate(a):
     def maxfun(a):
         m=a[0]
