@@ -1,3 +1,28 @@
+#Counter
+from collections import Counter
+class Solution:
+    def intersect(self, a1: List[int], a2: List[int]) -> List[int]:
+        d=Counter(a1)&Counter(a2)
+        l=[]
+        for i in d:
+            j=d[i]
+            while j>0:
+                l.append(i)
+                j-=1
+        return l
+                
+#list
+from collections import Counter
+class Solution:
+    def intersect(self, a1: List[int], a2: List[int]) -> List[int]:
+        b=[]              
+        for i in a1:
+            if i in a2:
+                b.append(i)
+                a2.remove(i)
+        return b
+
+#count sort
 class Solution:
     def intersect(self, a1: List[int], a2: List[int]) -> List[int]:
         if len(a1)==0:
