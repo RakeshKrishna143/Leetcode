@@ -6,7 +6,7 @@ def combinationSum(candidates, target):
     
 def dfs(nums, target, index, path, res):
     if target < 0:
-        return  # backtracking
+        return  
     if target == 0:
         res.append(path)
         return 
@@ -14,6 +14,9 @@ def dfs(nums, target, index, path, res):
         if nums[i] > target:  #here  
             break
         dfs(nums, target-nums[i], i, path+[nums[i]], res)
-candidates = [2,3,4,5,6,7]
-target = 7
+
+target = 50
+
+candidates = [i for i in range(2,target+1)]
+
 print(combinationSum(candidates,target))
